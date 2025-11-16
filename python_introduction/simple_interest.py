@@ -9,5 +9,5 @@ time = 3          # T: The time in years (3 years)
 # Formula: Interest = Principal * Rate * Time
 interest = principal * rate * time
 
-# 3. Print the calculated interest in the specified format
+# 3. Print the calculated interest in the spcecified format
 print(f"The simple interest is: {interest}")
