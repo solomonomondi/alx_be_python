@@ -1,4 +1,3 @@
-
 def daily_reminder():
     print("=== Daily Task Reminder ===")
     
@@ -21,29 +20,25 @@ def daily_reminder():
         else:
             print("Please enter only 'yes' or 'no'")
     
-    # Process using Match Case for priority
-    match priority:
-        case 'high':
-            urgency = "urgent"
-        case 'medium':
-            urgency = "important"
-        case 'low':
-            urgency = "optional"
-    
-    # Add time sensitivity using conditional statements
+    # Generate customized reminder based on priority and time sensitivity
     if time_bound == 'yes':
-        time_message = "that requires immediate attention today!"
+        # Use Match Case for priority levels
+        match priority:
+            case 'high':
+                print(f"Reminder: '{task}' is a high priority task that requires immediate attention today!")
+            case 'medium':
+                print(f"Reminder: '{task}' is a medium priority task that requires immediate attention today!")
+            case 'low':
+                print(f"Reminder: '{task}' is a low priority task that requires immediate attention today!")
     else:
-        time_message = "to be completed when possible."
-    
-    # Generate and display customized reminder
-    print(f"\nReminder: '{task}' is a {priority} priority task {time_message}")
-    
-    # Additional loop for emphasis based on priority
-    if priority == 'high':
-        print("\n" + "!" * 50)
-        print("CRITICAL REMINDER - DO NOT FORGET!")
-        print("!" * 50)
+        # Use Match Case for priority levels (not time-bound)
+        match priority:
+            case 'high':
+                print(f"Reminder: '{task}' is a high priority task")
+            case 'medium':
+                print(f"Reminder: '{task}' is a medium priority task")
+            case 'low':
+                print(f"Reminder: '{task}' is a low priority task")
 
 # Run the reminder function
 if __name__ == "__main__":
